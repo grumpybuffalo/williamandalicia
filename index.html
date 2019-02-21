@@ -1,9 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Alicia Torres and William Hoza's Wedding Website
+    </title>
+    <style>
+      body {
+        color:#303030;
+        font-family:sans-serif;
+        margin:0;
+      }
+      
+      header {
+        position:sticky;
+        top:0;
+      }
+      
+      header h1 {
+        text-align:center;
+      }
+      
+      h2 {
+        text-align:center;
+        padding:200px 20px;
+        background-image:url(westport.jpg);
+        background-size:cover;
+        background-position:center;
+        font-size:100px;
+        margin:0;
+        color:white;
+      }
+        
+      #header-small {
+        padding:10px;
+      }
+    </style>
   </head>
   <body>
-    <img src="us.jpg" style="width:500px;max-width:100%;">
+    <header>
+      <div id="header-small">
+        <time datetime="2019-11-09" style="margin-right:20px;">November 9, 2019</time>
+        Austin, TX
+        <span style="float:right;">
+          #cavemanandwife
+        </span>
+      </div>
+      <h1>
+        ALICIA &amp; WILLIAM
+      </h1>
+    </header>
+    <main>
+      <h2>
+        <span id="countdown">299</span> DAYS TO GO
+      </h2>
+    </main>
+    
+    <script>
+      const weddingDate = new Date("11/9/19");
+      const MS_IN_DAY = 60 * 60 * 24 * 1000;
+      var currentCountdown = 299;
+      var daysRemaining;
+      
+      computeDaysRemaining();
+      
+      function computeDaysRemaining() {
+        var now = new Date();
+        daysRemaining = Math.ceil((weddingDate - now) / MS_IN_DAY);
+        updateCountdown();
+      }
+      
+      function updateCountdown() {
+        if (currentCountdown > daysRemaining) {
+          currentCountdown--;
+          document.querySelector("#countdown").innerHTML = currentCountdown;
+          setTimeout(updateCountdown, 30);
+        } else {
+          now = new Date();
+          msFromMidnight = now.getHours() * 60 * 60 * 1000 + now.getMinutes() * 60 * 1000 + now.getSeconds() * 1000 + now.getMilliseconds();
+          msToMidnight = MS_IN_DAY - msFromMidnight;
+          setTimeout(computeDaysRemaining, msToMidnight);
+        }
+      }
+    </script>
   </body>
 </html>
