@@ -6,26 +6,10 @@
     <title>
       Alicia Torres and William Hoza's Wedding Website
     </title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/index.css">
     <style>
-      body {
-        color:#303030;
-        font-family:sans-serif;
-        margin:0;
-      }
-      
-      header {
-        position:sticky;
-        top:0;
-        background-color:white;
-      }
-      
-      header h1 {
-        text-align:center;
-        margin:0;
-        padding:20px;
-      }
-      
-      h2 {
+      #days-to-go {
         text-align:center;
         padding:200px 20px;
         background-image:url(westport.jpg);
@@ -35,31 +19,150 @@
         margin:0;
         color:white;
       }
+      
+      #days-to-go-text {
+        background-color:rgba(0, 0, 0, 0.5);
+      }
+      
+      #bride-and-groom {
+        padding:100px 0;
+      }
+      
+      #circle {
+        text-align:center;
+      }
+      
+      @media(min-width:600px) {
+        #bride-and-groom {
+          padding:50px 0;
+          background-color:#0f6ec5;
+        }
         
-      #header-small {
-        padding:10px;
+        #circle {
+          display:flex;
+          margin:auto;
+          flex-direction:column;
+          justify-content:center;
+          background-color:white;
+          width:500px;
+          height:500px;
+          border-radius:50%;
+        }
+      }
+      
+      .spouse {
+        font-size:40px;
+        line-height:1.4;
+        letter-spacing:8px;
+      }
+      
+      #and {
+        font-size:14px;
+        padding:50px 0;
+        letter-spacing:3px;
+      }
+      
+      #event-basics {
+        padding-top:32px;
+        text-align:center;
+        background-color:#c0e1ff;
+      }
+      
+      #event-hashtag, .event-fact > div:first-child {
+        font-size:16px;
+        letter-spacing:5px;
+      }
+      
+      #place-and-date {
+        display:flex;
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+      }
+      
+      .event-fact {
+        width:400px;
+        max-width:100%;
+      }
+      
+      .event-fact > div:first-child {
+        padding-top:32px;
+      }
+      
+      .event-fact > div:nth-child(2) {
+        font-size:24px;
+        letter-spacing:6px;
+        padding-top:20px;
+        padding-bottom:32px;
+      }
+      
+      #photo-large {
+        background-image:url(flowers.jpg);
+        background-size:cover;
+        background-position:center;
+        height:calc(500px + 20vw);
       }
     </style>
   </head>
   <body>
-    <header>
-      <div id="header-small">
-        <time datetime="2019-11-09" style="margin-right:20px;">November 9, 2019</time>
-        Austin, TX
-        <span style="float:right;">
-          #cavemanandwife
-        </span>
-      </div>
-      <h1>
-        ALICIA &amp; WILLIAM
-      </h1>
-    </header>
-    <main>
-      <h2>
-        <span id="countdown">299</span> DAYS TO GO
-      </h2>
-    </main>
+    <div id="flow">
+      <header>
+        <div id="header-event-basics">
+          <time datetime="2019-11-09" style="margin-right:20px;">November 9, 2019</time>
+          Austin, TX
+          <span style="float:right;">
+            #cavemanandwife
+          </span>
+        </div>
+        <div id="h1-line">
+          <h1>
+            ALICIA &amp; WILLIAM
+          </h1>
+          <button id="nav-show-button" onclick="showNav();">Menu</button>
+        </div>
+        <nav>
+          <div><button id="nav-hide-button" onclick="hideNav();">Hide</button></div>
+          <div><a href="/">HOME</a></div>
+          <div><a href="/wedding-party/">WEDDING PARTY</a></div>
+        </nav>
+      </header>
+      <main>
+        <div id="days-to-go">
+          <span id="days-to-go-text"><span id="countdown">299</span> DAYS TO GO</span>
+        </div>
+        <div id="bride-and-groom">
+          <div id="circle">
+            <div class="spouse">
+              ALICIA<br>TORRES
+            </div>
+            <div id="and">
+              AND
+            </div>
+            <div class="spouse">
+              WILLIAM<br>HOZA
+            </div>
+          </div>
+        </div>
+        <div id="event-basics">
+          <div id="event-hashtag">
+            #CAVEMANANDWIFE
+          </div>
+          <div id="place-and-date">
+            <div class="event-fact">
+              <div>IN</div>
+              <div>AUSTIN, TEXAS</div>
+            </div>
+            <div class="event-fact">
+              <div>ON</div>
+              <div><time datetime="2019-11-09">NOVEMBER 9, 2019</time></div>
+            </div>
+          </div>
+        </div>
+        <div id="photo-large"></div>
+      </main>
+    </div>
     
+    <script src="/assets/index.js"></script>
     <script>
       const weddingDate = new Date("11/9/19");
       const MS_IN_DAY = 60 * 60 * 24 * 1000;
