@@ -1,0 +1,46 @@
+body {
+  overflow-y:scroll;
+}
+
+#image-data {
+  font-size:0;
+}
+
+#gallery {
+  font-size:0;
+}
+
+#gallery > div > div {
+  display:flex;
+}
+
+#gallery a {
+  margin-bottom:3px;
+}
+
+#gallery > div:nth-child(odd) {
+  clear:right;
+}
+#gallery > div:nth-child(odd) > .large {
+  float:left;
+}
+#gallery > div:nth-child(odd) .small {
+  margin-left:3px;
+}
+#gallery > div.no-large:nth-child(odd) .small:first-child {
+  margin-left:0;
+}
+
+#gallery > div:nth-child(even) {
+  clear:left;
+}
+#gallery > div:nth-child(even) > .large {
+  float:right;
+}
+#gallery > div:nth-child(even) .small {
+  margin-right:3px;
+}
+#gallery > div.no-large:nth-child(even) .small:last-child {
+  margin-right:0;
+}
+
