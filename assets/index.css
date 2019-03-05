@@ -16,6 +16,7 @@ header {
   top:0;
   background-color:white;
   border-bottom:1px solid black;
+  z-index:1000;
 }
       
 #header-event-basics {

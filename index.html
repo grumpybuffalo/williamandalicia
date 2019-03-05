@@ -22,16 +22,29 @@
       #days-to-go {
         text-align:center;
         padding:200px 20px;
-        background-image:url(westport.jpg);
         background-size:cover;
         background-position:center;
         font-size:100px;
         margin:0;
         color:white;
+        position:relative;
+        overflow:hidden;
+      }
+      
+      #days-to-go > img {
+        position:absolute;
+        right:50%;
+        bottom:50%;
+        transform:translate(50%, 50%);
+        z-index:0;
+        min-width:100%;
+        min-height:100%;
       }
       
       #days-to-go-text {
         text-shadow:2px 2px black;
+        z-index:1;
+        position:relative;
       }
       
       #bride-and-groom {
@@ -134,6 +147,7 @@
       </header>
       <main>
         <div id="days-to-go">
+          <img src="westport-2007.jpg" srcset="westport-4096.jpg 4096w, westport-2867.jpg 2867w, westport-2007.jpg 2007w, westport-1405.jpg 1405w, westport-984.jpg 984w, westport-689.jpg 689w" sizes="2400px">
           <span id="days-to-go-text"><span id="countdown">299</span> DAYS TO GO</span>
         </div>
         <div id="bride-and-groom">
