@@ -53,7 +53,7 @@ def main():
           Photos | Alicia Torres and William Hoza's Wedding Website
         </title>
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
-        <link rel="stylesheet" href="/assets/index.css" />
+        <link rel="stylesheet" href="/assets/index2.css" />
         <link rel="stylesheet" href="index.css" />
       </head>
       <body>
