@@ -22,19 +22,22 @@
       .party-member {
         text-align:center;
         border-bottom:2px solid black;
-        margin:0 10px;
+        padding:0 10px;
       }
       
-      .party-pair:last-child > .party-member:last-child {
+      .party-pair:last-child > .party-member:last-child, .party-singleton:last-child > .party-member {
         border-bottom:none;
       }
       
       @media(min-width:770px) {
-        .party-pair {
+        .party-pair, .party-singleton {
           display:grid;
-          grid-template-columns:1fr 1fr;
           max-width:1000px;
           margin:auto;
+        }
+        
+        .party-pair {
+          grid-template-columns:1fr 1fr;
         }
         
         .party-pair:nth-child(2) {
@@ -46,7 +49,7 @@
           margin-bottom:100px;
         }
         
-        .party-member:first-child {
+        .party-pair > .party-member:first-child {
           border-right:2px solid black;
         }
       }
@@ -55,6 +58,7 @@
         width:150px;
         height:150px;
         margin:40px 0 20px;
+        border-radius:50%;
       }
       
       .party-name {
@@ -141,7 +145,7 @@
         
         <div class="party-pair">
           <div class="party-member">
-            <img class="party-photo" src="emily.jpg">
+            <img class="party-photo" src="emily-hoza.jpg">
             <div class="party-name">
               EMILY HOZA
             </div>
@@ -198,6 +202,81 @@
             </div>
             <div class="party-title">
               GROOMSMAN
+            </div>
+          </div>
+        </div>
+        
+        <div class="party-pair">
+          <div class="party-member">
+            <img class="party-photo" src="maura.jpg">
+            <div class="party-name">
+              MAURA TORRES
+            </div>
+            <div class="party-title">
+              MOTHER OF THE BRIDE
+            </div>
+          </div>
+          <div class="party-member">
+            <img class="party-photo" src="roseanne.jpg">
+            <div class="party-name">
+              ROSEANNE HOZA
+            </div>
+            <div class="party-title">
+              MOTHER OF THE GROOM
+            </div>
+          </div>
+        </div>
+        
+        <div class="party-pair">
+          <div class="party-member">
+            <img class="party-photo" src="alfred.jpg">
+            <div class="party-name">
+              ALFRED TORRES
+            </div>
+            <div class="party-title">
+              FATHER OF THE BRIDE
+            </div>
+          </div>
+          <div class="party-member">
+            <img class="party-photo" src="bradley.jpg">
+            <div class="party-name">
+              BRADLEY HOZA
+            </div>
+            <div class="party-title">
+              FATHER OF THE GROOM
+            </div>
+          </div>
+        </div>
+        
+        <div class="party-pair">
+          <div class="party-member">
+            <img class="party-photo" src="emily-torres.jpg">
+            <div class="party-name">
+              EMILY TORRES
+            </div>
+            <div class="party-title">
+              FLOWER GIRL
+            </div>
+          </div>
+          <div class="party-member">
+            <img class="party-photo" src="katrina.jpg">
+            <div class="party-name">
+              KATRINA HOZA
+            </div>
+            <div class="party-title">
+              FLOWER GIRL
+            </div>
+          </div>
+        </div>
+        
+        <div class="party-singleton">
+          <div class="party-member">
+            <img class="party-photo" src="carson.jpg">
+            <div class="party-name">
+              CARSON HOZA
+            </div>
+            <div class="party-title">
+              RING BEARER
             </div>
           </div>
         </div>
