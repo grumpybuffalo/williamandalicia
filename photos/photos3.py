@@ -60,7 +60,7 @@ def main():
         <div id="flow">
           <header>
             <div id="header-event-basics">
-              <time datetime="2019-11-09" style="margin-right:20px;">November 9, 2019</time>
+              <time datetime="2019-11-08" style="margin-right:20px;">November 8, 2019</time>
               Austin, TX
               <span style="float:right;">
                 &num;cavemanandwife
@@ -77,6 +77,7 @@ def main():
               <div><a href="/">HOME</a></div>
               <div><a href="/wedding-party/">WEDDING PARTY</a></div>
               <div><a href="/photos/">PHOTOS</a></div>
+              <div><a href="/places-of-interest/">PLACES OF INTEREST</a></div>
             </nav>
           </header>
           <main>
