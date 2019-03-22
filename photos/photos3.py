@@ -63,7 +63,7 @@ def main():
               <time datetime="2019-11-08" style="margin-right:20px;">November 8, 2019</time>
               Austin, TX
               <span style="float:right;">
-                &num;cavemanandwife
+                &num;cavemanandwife2019
               </span>
             </div>
             <div id="h1-line">
@@ -77,6 +77,7 @@ def main():
               <div><a href="/">HOME</a></div>
               <div><a href="/wedding-party/">WEDDING PARTY</a></div>
               <div><a href="/photos/">PHOTOS</a></div>
+              <div><a href="/our-catholic-wedding/">OUR CATHOLIC WEDDING</a></div>
               <div><a href="/places-of-interest/">PLACES OF INTEREST</a></div>
             </nav>
           </header>
