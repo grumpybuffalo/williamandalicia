@@ -37,14 +37,10 @@
         bottom:50%;
         transform:translate(50%, 50%);
         z-index:0;
+        width:100%;
         height:100%;
-      }
-      
-      @media(min-width:1600px) {
-        #days-to-go > img {
-          width:100%;
-          height:auto;
-        }
+        object-fit:cover;
+        object-position:50% 25%;
       }
       
       #days-to-go-text {
@@ -127,7 +123,16 @@
         background-image:url(flowers.jpg);
         background-size:cover;
         background-position:center;
+        
+      }
+      
+      #bottom-photo {
+        width:100%;
         height:calc(500px + 20vw);
+        max-width:2000px;
+        display:block;
+        margin:auto;
+        object-fit:cover;
       }
     </style>
   </head>
@@ -158,7 +163,7 @@
       </header>
       <main>
         <div id="days-to-go">
-          <img src="westport-2007.jpg" srcset="westport-4096.jpg 4096w, westport-2867.jpg 2867w, westport-2007.jpg 2007w, westport-1405.jpg 1405w, westport-984.jpg 984w, westport-689.jpg 689w" sizes="2400px" id="top-img">
+          <img src="/photos/111-2525.jpg" srcset="/photos/111-2525.jpg 2525w, /photos/111-1803.jpg 1803w, /photos/111-1287.jpg 1287w, /photos/111-919.jpg 919w" sizes="2400px" id="top-img">
           <span id="days-to-go-text"><span id="countdown">298</span> DAYS TO GO</span>
         </div>
         <div id="bride-and-groom">
@@ -187,7 +192,7 @@
             </div>
           </div>
         </div>
-        <div id="photo-large"></div>
+        <img id="bottom-photo" src="/photos/97.jpg" srcset="/photos/97-5876.jpg 5876w, /photos/97-4197.jpg 4197w, /photos/97-2997.jpg 2997w, /photos/97-2140.jpg 2140w, /photos/97-1528.jpg 1528w, /photos/97-1091.jpg 1091w, /photos/779.jpg 779w, /photos/97-556.jpg 556w, /photos/97-397.jpg 397w" sizes="(min-width:2000px) 2000px, 100vw" />
       </main>
     </div>
     
