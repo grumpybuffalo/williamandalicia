@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123337994-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-123337994-2');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Alicia Torres and William Hoza's Wedding Website
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/index2.css">
+    <style>
+      #days-to-go {
+        text-align:center;
+        padding:200px 20px;
+        background-size:cover;
+        background-position:center;
+        font-size:100px;
+        margin:0;
+        color:white;
+        position:relative;
+        overflow:hidden;
+      }
+      
+      #days-to-go > img {
+        position:absolute;
+        right:50%;
+        bottom:50%;
+        transform:translate(50%, 50%);
+        z-index:0;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position:50% 25%;
+      }
+      
+      #days-to-go-text {
+        text-shadow:2px 2px black;
+        z-index:1;
+        position:relative;
+        opacity:0;
+        transition:opacity 300ms;
+      }
+      
+      #bride-and-groom {
+        padding:100px 0;
+      }
+      
+      #circle {
+        text-align:center;
+      }
+      
+      @media(min-width:600px) {
+        #bride-and-groom {
+          padding:50px 0;
+          background-color:#76c4fb;
+        }
+        
+        #circle {
+          display:flex;
+          margin:auto;
+          flex-direction:column;
+          justify-content:center;
+          background-color:white;
+          width:500px;
+          height:500px;
+          border-radius:50%;
+        }
+      }
+      
+      .spouse {
+        font-size:40px;
+        line-height:1.4;
+        letter-spacing:8px;
+      }
+      
+      #and {
+        font-size:14px;
+        padding:50px 0;
+        letter-spacing:3px;
+      }
+      
+      #event-basics {
+        padding-top:32px;
+        text-align:center;
+        background-color:#0648a3;
+        color:white;
+      }
+      
+      #event-hashtag, {
+        font-size:16px;
+        letter-spacing:5px;
+      }
+      
+      #place-and-date {
+        display:flex;
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+      }
+      
+      .event-fact {
+        width:400px;
+        max-width:100%;
+      }
+      
+      .event-fact > div {
+        font-size:24px;
+        letter-spacing:6px;
+        padding:32px 0;
+      }
+      
+      #photo-large {
+        background-image:url(flowers.jpg);
+        background-size:cover;
+        background-position:center;
+        
+      }
+      
+      #bottom-photo {
+        width:100%;
+        height:calc(500px + 20vw);
+        max-width:2000px;
+        display:block;
+        margin:auto;
+        object-fit:cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="flow">
+      <header>
+        <div id="header-event-basics">
+          <time datetime="2019-11-08" style="margin-right:20px;">November 8, 2019</time>
+          Austin, TX
+          <span style="float:right;">
+            #cavemanandwife2019
+          </span>
+        </div>
+        <div id="h1-line">
+          <h1>
+            ALICIA &amp; WILLIAM
+          </h1>
+          <button id="nav-show-button" onclick="showNav();">Menu</button>
+        </div>
+        <nav>
+          <div><button id="nav-hide-button" onclick="hideNav();">Hide</button></div>
+          <div><a href="/">HOME</a></div>
+          <div><a href="/schedule">SCHEDULE</a></div>
+          <div><a href="/wedding-party/">WEDDING PARTY</a></div>
+          <div><a href="/photos/">PHOTOS</a></div>
+          <div><a href="/our-catholic-wedding/">OUR CATHOLIC WEDDING</a></div>
+          <div><a href="/places-of-interest/">PLACES OF INTEREST</a></div>
+          <div><a href="https://www.zola.com/registry/alicia-william">REGISTRY</a></div>
+        </nav>
+      </header>
+      <main>
+        <div id="days-to-go">
+          <img src="/photos/111-2525.jpg" srcset="/photos/111-2525.jpg 2525w, /photos/111-1803.jpg 1803w, /photos/111-1287.jpg 1287w, /photos/111-919.jpg 919w" sizes="2400px" id="top-img">
+          <span id="days-to-go-text"><span id="countdown">298</span> DAYS TO GO</span>
+        </div>
+        <div id="bride-and-groom">
+          <div id="circle">
+            <div class="spouse">
+              ALICIA<br>TORRES
+            </div>
+            <div id="and">
+              AND
+            </div>
+            <div class="spouse">
+              WILLIAM<br>HOZA
+            </div>
+          </div>
+        </div>
+        <div id="event-basics">
+          <div id="event-hashtag">
+            #CAVEMANANDWIFE2019
+          </div>
+          <div id="place-and-date">
+            <div class="event-fact">
+              <div>AUSTIN, TEXAS</div>
+            </div>
+            <div class="event-fact">
+              <div><time datetime="2019-11-08">NOVEMBER 8, 2019</time></div>
+            </div>
+          </div>
+        </div>
+        <img id="bottom-photo" src="/photos/97.jpg" srcset="/photos/97-5876.jpg 5876w, /photos/97-4197.jpg 4197w, /photos/97-2997.jpg 2997w, /photos/97-2140.jpg 2140w, /photos/97-1528.jpg 1528w, /photos/97-1091.jpg 1091w, /photos/779.jpg 779w, /photos/97-556.jpg 556w, /photos/97-397.jpg 397w" sizes="(min-width:2000px) 2000px, 100vw" />
+      </main>
+    </div>
+    
+    <script src="/assets/index.js"></script>
+    <script>
+      const weddingDate = new Date("11/8/19");
+      const MS_IN_DAY = 60 * 60 * 24 * 1000;
+      let currentCountdown = 298;
+      let daysRemaining;
+      const topImg = document.querySelector("#top-img");
+      let lastUpdateTime;
+      
+      if (topImg.complete) {
+        showCountdown();
+      } else {
+        topImg.addEventListener("load", showCountdown);
+      }
+      
+      function showCountdown() {
+        document.querySelector("#days-to-go-text").style.opacity = 1;
+        computeDaysRemaining();
+      }
+      
+      function computeDaysRemaining() {
+        var now = new Date();
+        daysRemaining = Math.ceil((weddingDate - now) / MS_IN_DAY);
+        lastUpdateTime = window.performance.now();
+        updateCountdown();
+      }
+      
+      function updateCountdown(timestamp) {
+        if (currentCountdown > daysRemaining) {
+          if (timestamp - lastUpdateTime > 30) {
+            currentCountdown--;
+            document.querySelector("#countdown").innerHTML = currentCountdown;
+            lastUpdateTime = timestamp;
+          }
+          requestAnimationFrame(updateCountdown);
+        } else {
+          now = new Date();
+          msFromMidnight = now.getHours() * 60 * 60 * 1000 + now.getMinutes() * 60 * 1000 + now.getSeconds() * 1000 + now.getMilliseconds();
+          msToMidnight = MS_IN_DAY - msFromMidnight;
+          setTimeout(computeDaysRemaining, msToMidnight);
+        }
+      }
+    </script>
+  </body>
+</html>
