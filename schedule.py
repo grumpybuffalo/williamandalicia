@@ -12,6 +12,48 @@ def compile():
       <div class="schedule-item">
         <div class="schedule-item-basics">
           <div class="schedule-item-name">
+            Rehearsal
+          </div>
+          <div class="schedule-item-datetime">
+            (Special invitation required)<br />
+            Thursday, November 7, 2019
+          </div>
+          <div class="schedule-item-datetime">
+            (Time TBA)
+          </div>
+        </div>
+        <div class="schedule-item-details">
+          <div class="schedule-item-location">
+            University Catholic Center<br />
+            2010 University Ave<br />
+            Austin, TX 78705
+          </div>
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-item-basics">
+          <div class="schedule-item-name">
+            Rehearsal Dinner
+          </div>
+          <div class="schedule-item-datetime">
+            (Special invitation required)<br />
+            Thursday, November 7, 2019
+          </div>
+          <div class="schedule-item-datetime">
+            6pm
+          </div>
+        </div>
+        <div class="schedule-item-details">
+          <div class="schedule-item-location">
+            Capital Cruises<br />
+            208 Barton Springs Rd<br />
+            Austin, TX 78704
+          </div>
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-item-basics">
+          <div class="schedule-item-name">
             Ceremony
           </div>
           <div class="schedule-item-datetime">

@@ -1,0 +1,53 @@
+.party-member {
+  text-align:center;
+  border-bottom:2px solid black;
+  padding:0 10px;
+}
+
+.party-pair:last-child > .party-member:last-child, .party-singleton:last-child > .party-member {
+  border-bottom:none;
+}
+
+@media(min-width:770px) {
+  .party-pair, .party-singleton {
+    display:grid;
+    max-width:1000px;
+    margin:auto;
+  }
+  
+  .party-pair {
+    grid-template-columns:1fr 1fr;
+  }
+  
+  .party-pair:nth-child(2) {
+    margin-top:100px;
+  }
+  
+  .party-member {
+    border-bottom:none;
+    margin-bottom:100px;
+  }
+  
+  .party-pair > .party-member:first-child {
+    border-right:2px solid black;
+  }
+}
+
+.party-photo {
+  width:150px;
+  height:150px;
+  margin:40px 0 20px;
+  border-radius:50%;
+}
+
+.party-name {
+  font-size:32px;
+  letter-spacing:5px;
+  margin:20px 0;
+}
+
+.party-title {
+  font-size:14px;
+  letter-spacing:3px;
+  margin-bottom:20px;
+}
