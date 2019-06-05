@@ -28,7 +28,7 @@ def compile(filename, mainContents, title=None, stylesheet=None, script=None):
           {title + " | " if title != None else None}Alicia Torres and William Hoza's Wedding Website
         </title>
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
-        <link rel="stylesheet" href="/assets/index2.css" />
+        <link rel="stylesheet" href="/assets/index3.css" />
         {stylesheetLink}
       </head>
       <body>
