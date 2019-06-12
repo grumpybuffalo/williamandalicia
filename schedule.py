@@ -19,10 +19,11 @@ def compile():
             Thursday, November 7, 2019
           </div>
           <div class="schedule-item-datetime">
-            (Time TBA)
+            4pm
           </div>
         </div>
         <div class="schedule-item-details">
+          <img src="ucc.jpg" class="schedule-photo" />
           <div class="schedule-item-location">
             University Catholic Center<br />
             2010 University Ave<br />
@@ -44,6 +45,7 @@ def compile():
           </div>
         </div>
         <div class="schedule-item-details">
+          <img src="capital-cruises.jpg" class="schedule-photo" />
           <div class="schedule-item-location">
             Capital Cruises<br />
             208 Barton Springs Rd<br />
@@ -54,16 +56,17 @@ def compile():
       <div class="schedule-item">
         <div class="schedule-item-basics">
           <div class="schedule-item-name">
-            Ceremony
+            Nuptial Mass
           </div>
           <div class="schedule-item-datetime">
             Friday, November 8, 2019
           </div>
           <div class="schedule-item-datetime">
-            (Time TBA)
+            3pm
           </div>
         </div>
         <div class="schedule-item-details">
+          <img src="ucc.jpg" class="schedule-photo" />
           <div class="schedule-item-location">
             University Catholic Center<br />
             2010 University Ave<br />
@@ -84,6 +87,7 @@ def compile():
           </div>
         </div>
         <div class="schedule-item-details">
+          <img src="abels.jpg" class="schedule-photo" />
           <div class="schedule-item-location">
             Abel's on the Lake<br />
             3825 Lake Austin Blvd<br />

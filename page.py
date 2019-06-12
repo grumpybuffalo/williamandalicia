@@ -69,5 +69,5 @@ def compile(filename, mainContents, title=None, stylesheet=None, script=None):
     </html>
   )
   
-  file = open(filename, "w")
+  file = open(filename, "w", encoding="utf-8")
   file.write("<!DOCTYPE html>" + str(doc))

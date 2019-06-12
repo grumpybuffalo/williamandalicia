@@ -1,0 +1,12 @@
+article {
+  max-width:1000px;
+  padding:24px;
+  margin:auto;
+}
+
+iframe {
+  display:block;
+  margin:auto;
+  width:640px;
+  max-width:100%;
+}
