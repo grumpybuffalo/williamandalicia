@@ -4,6 +4,7 @@ import schedule
 import weddingParty
 import placesOfInterest
 import ourCatholicWedding
+import travel
 
 def main():
   home.compile()
@@ -12,6 +13,7 @@ def main():
   weddingParty.compile()
   placesOfInterest.compile()
   ourCatholicWedding.compile()
+  travel.compile()
 
 if __name__ == "__main__":
   main()
