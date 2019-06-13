@@ -21,10 +21,10 @@ def compile():
             The group rate is $145/night (while rooms are available). To get this rate:
             <ul style="text-align:left;">
               <li>
-                If you are checking in on Thursday, November 7 and checking out on Saturday, November 9, you can book your room online using <a href="https://www.holidayinn.com/redirect?path=hd&brandCode=HI&localeCode=en&regionCode=1&hotelCode=AUSTL&_PMID=99801505&GPC=THW&cn=no&viewfullsite=true">this link</a>, which will automatically fill in group code <b>THW</b>. You can also book your room over the phone by calling 1-888-615-0509; say you are a guest at the <b>Torres Hoza Wedding</b>.
+                To book a room for Thursday and/or Friday night, please use <a href="https://www.holidayinn.com/redirect?path=hd&brandCode=HI&localeCode=en&regionCode=1&hotelCode=AUSTL&_PMID=99801505&GPC=THW&cn=no&viewfullsite=true">this link</a>, which will automatically fill in group code <b>THW</b>. You can also book your room over the phone by calling 1-888-615-0509; say you are a guest at the <b>Torres Hoza Wedding</b>.
               </li>
               <li>
-                Otherwise, please book your room over the phone by calling Lovinia at 512-634-1275. Say you are a guest at the <b>Torres Hoza Wedding</b>.
+                For other nights, please book your room by calling Lovinia at 512-634-1275. Say you are a guest at the <b>Torres Hoza Wedding</b>.
               </li>
             </ul>
           </div>
