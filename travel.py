@@ -9,6 +9,9 @@ def compile():
       <h2>
         TRAVEL
       </h2>
+      <div id="shuttle-info">
+        Shuttle service between events will be provided.
+      </div>
       <div class="schedule-item">
         <div class="schedule-item-basics">
           <div class="schedule-item-name">
@@ -60,4 +63,4 @@ def compile():
     </frag>
   )
   
-  page.compile("travel/index.html", mainContents, stylesheet="/schedule/index.css", title="Travel")
+  page.compile("travel/index.html", mainContents, stylesheet="/schedule/index2.css", title="Travel")

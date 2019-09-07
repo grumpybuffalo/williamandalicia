@@ -52,4 +52,4 @@ def compile():
     </frag>
   )
   
-  page.compile("photos/index.html", mainContents, title="Photos", stylesheet="/photos/index.css", script="/photos/index.js")
+  page.compile("photos/index.html", mainContents, title="Photos", stylesheet="/photos/index.css", scripts=["/photos/index.js"])

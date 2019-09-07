@@ -1,7 +1,7 @@
 # -*- coding: pyxl -*-
 from pyxl import html
 
-def compile(filename, mainContents, title=None, stylesheet=None, script=None):
+def compile(filename, mainContents, title=None, stylesheet=None, scripts=[]):
   gaScript1 = <script src="https://www.googletagmanager.com/gtag/js?id=UA-123337994-2"></script>
   gaScript2 = <script>{html.rawhtml("""window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-123337994-2');""")}</script>
   
@@ -11,11 +11,10 @@ def compile(filename, mainContents, title=None, stylesheet=None, script=None):
     stylesheetLink = None
   else:
     stylesheetLink = <link rel="stylesheet" href="{stylesheet}" />
-    
-  if script == None:
-    scriptElement = None
-  else:
-    scriptElement = <script src="{script}"></script>
+  
+  scriptElement = <frag></frag>
+  for script in scripts:
+    scriptElement.append(<script src="{script}"></script>)
   
   doc = (
     <html lang="en">
@@ -27,8 +26,8 @@ def compile(filename, mainContents, title=None, stylesheet=None, script=None):
         <title>
           {title + " | " if title != None else None}Alicia Torres and William Hoza's Wedding Website
         </title>
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
-        <link rel="stylesheet" href="/assets/index3.css" />
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans|Quicksand:300,400&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="/assets/index4.css" />
         {stylesheetLink}
       </head>
       <body>

@@ -9,6 +9,9 @@ def compile():
       <h2>
         SCHEDULE
       </h2>
+      <div id="shuttle-info">
+        Shuttle service between events will be provided.
+      </div>
       <div class="schedule-item">
         <div class="schedule-item-basics">
           <div class="schedule-item-name">
@@ -56,9 +59,32 @@ def compile():
       <div class="schedule-item">
         <div class="schedule-item-basics">
           <div class="schedule-item-name">
+            Welcome Party
+          </div>
+          <div class="schedule-item-datetime">
+            (All guests are invited)<br />
+            Thursday, November 7, 2019
+          </div>
+          <div class="schedule-item-datetime">
+            Time TBD
+          </div>
+        </div>
+        <div class="schedule-item-details">
+          <img src="capital-cruises.jpg" class="schedule-photo" />
+          <div class="schedule-item-location">
+            Capital Cruises<br />
+            208 Barton Springs Rd<br />
+            Austin, TX 78704
+          </div>
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-item-basics">
+          <div class="schedule-item-name">
             Nuptial Mass
           </div>
           <div class="schedule-item-datetime">
+            (All guests are invited)<br />
             Friday, November 8, 2019
           </div>
           <div class="schedule-item-datetime">
@@ -80,6 +106,7 @@ def compile():
             Reception
           </div>
           <div class="schedule-item-datetime">
+            (All guests are invited)<br />
             Friday, November 8, 2019
           </div>
           <div class="schedule-item-datetime">
@@ -98,4 +125,4 @@ def compile():
     </frag>
   )
   
-  page.compile("schedule/index.html", mainContents, stylesheet="/schedule/index.css", title="Schedule")
+  page.compile("schedule/index.html", mainContents, stylesheet="/schedule/index2.css", title="Schedule")
