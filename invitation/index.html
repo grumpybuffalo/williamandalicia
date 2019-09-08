@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123337994-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-123337994-2');
+    </script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Invitation to Alicia and William's Wedding
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Tangerine|Quicksand:300,400&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin:0;
+        padding:0;
+        overflow-y:scroll;
+        background-color:#76c4fb;
+      }
+      
+      #canv {
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:0;
+        display:none;
+      }
+      
+      #content {
+        margin:auto;
+        text-align:center;
+        padding-left:0px;
+        padding-right:0px;
+        position:relative;
+        z-index:1;
+        font-family:"Tangerine", cursive;
+        font-size:40px;
+        display:none;
+      }
+      
+      .name {
+        font-family:"Cinzel", serif;
+      }
+      
+      #not-fancy {
+        font-family:"Quicksand", sans-serif;
+        font-weight:300;
+        font-size:18px;
+        text-align:left;
+      }
+      
+      input[type="text"] {
+        width:100%;
+        display:block;
+        margin:12px 0;
+      }
+      
+      input[type="submit"], input[type="text"], input[type="button"] {
+        height:36px;
+        box-sizing:border-box;
+      }
+      
+      input[type="button"].x {
+        height:auto;
+        background:none;
+        border:none;
+        padding:0;
+        margin-left:10px;
+        color:#0000FF;
+        text-decoration:underline;
+        cursor:pointer;
+        font-family:"Quicksand", sans-serif;
+        font-size:14px;
+      }
+      
+      #successDiv, #failureDiv {
+        display:none;
+      }
+      
+      #addGuestForm {
+        margin-bottom:12px;
+      }
+      
+      
+      
+      #additionalEventInfo {
+        text-align:center;
+        margin:24px 0;
+      }
+      
+      hr {
+        border-top:none;
+        border-bottom:1px solid #A0A0A0;
+        margin:24px 0;
+      }
+      
+      .response-element {
+        display:inline-block;
+        padding:5px 0;
+      }
+      
+      .response-element label {
+        padding-left:5px;
+        padding-right:10px;
+      }
+      
+      #weddingEventContainer {
+        margin-bottom:24px;
+      }
+      
+      #recapUL li {
+        margin:10px 0;
+      }
+      
+      #newRSVP, #oldRSVP {
+        display:none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      Together with their families
+      <br><br>
+      <span class="name">Sarah Alicia Torres</span><br>&amp;<br><span class="name">William Michael Hoza</span>
+      <br><br>
+      request the honor of your presence
+      at the Nuptial Mass uniting them
+      in the Sacrament of Holy Matrimony
+      <br><br>
+      on Friday, November 8, 2019 at 3pm<br>
+      University Catholic Center<br>
+      Austin, Texas
+      <div id="not-fancy">
+        <div id="additionalEventInfo">
+          We would also appreciate your presence at the <span id="invitedEventList"></span>. <a href="/schedule/" id="full-details">Full details</a>
+        </div>
+        <hr>
+        <div id="newRSVP">
+          <div id="mainGuestListContainer">
+            Kindly RSVP here by <strong>October 4</strong> on behalf of the following guests.
+            <ol id="mainGuestList"></ol>
+            <form id="addGuestForm" onsubmit="event.preventDefault(); addExtraGuest();">
+              We have reserved <span id="totalGuestsAllowed"></span> seats for your party. Please enter the names of any additional guests here. (Significant others and/or children only, please.)
+              <input type="text" id="newGuestName" placeholder="What is the name of the new guest?" />
+              <input type="submit" id="newGuestSubmit" value="Add guest" />
+            </form>
+          </div>
+          <form onsubmit="event.preventDefault(); submitRSVP();" id="rsvpForm">
+            <div id="weddingEventContainer">
+              <div id="eventPrompt">Which events will you attend?</div>
+            </div>
+            Recap of your responses:
+            <ul id="recapUL">
+            </ul>
+            <input id="comments" type="text" placeholder="Anything else we should know?" />
+            <input type="submit" id="rsvpFormSubmitButton" />
+          </form>
+          <div id="successDiv">
+            Thank you for your response! Feel free to browse <a href="/">our wedding website</a>.
+          </div>
+          <div id="failureDiv">
+            Uh oh, something went wrong. Sorry about that. Please reload the page and RSVP again.
+          </div>
+        </div>
+        <div id="loadingDiv">Loading RSVP form...</div>
+        <div id="oldRSVP">
+          It looks like someone already submitted an RSVP on behalf of your party. Here's what we received:
+          <ul id="oldRSVPRecapUL">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <canvas id="canv">
+    </canvas>
+    <div id="message">
+      Loading...
+    </div>
+    
+    <script src="/assets/invitation-data.js"></script>
+    <script src="rsvp-form.js"></script>
+    <script>
+      let canv = document.querySelector("#canv");
+      let content = document.querySelector("#content");
+      let ctx = canv.getContext('2d');
+      
+      
+      // Scaling due to screen size, i.e., available number of CSS pixels.
+      // This affects the dimensions of the invitation *in CSS pixels*.
+      let screenWidthScaleFactor = 1; 
+      
+      // Scaling due to screen quality, i.e., device pixels per CSS pixel.
+      // This affects the dimensions of the invitation *in canvas pixels*.
+      let dpiScaleFactor = 1;
+      
+      // The dimensions of the full canvas, in *standard* pixels.
+      let cw = 0;
+      let ch = 0;
+      
+      let hangingBalls = [];
+      
+      function rescale() {
+        screenWidthScaleFactor = Math.min(document.body.clientWidth / 650, 1);
+        
+        // Scale the content area
+        content.style.maxWidth = cssPixelsFromStandardPixels(500) + "px";
+        content.style.fontSize = cssPixelsFromStandardPixels(40) + "px";
+        content.style.paddingTop = cssPixelsFromStandardPixels(200) + "px";
+        content.style.paddingBottom = cssPixelsFromStandardPixels(200) + "px";
+        
+        dpiScaleFactor = window.devicePixelRatio;
+        
+        // Scale the canvas element
+        canv.style.width = document.body.clientWidth + "px";
+        canv.style.height = document.body.clientHeight + "px";
+        canv.width = canvPixelsFromCSSPixels(document.body.clientWidth);
+        canv.height = canvPixelsFromCSSPixels(document.body.clientHeight);
+        
+        ctx.translate(canv.width / 2, 0);
+        ctx.scale(canvPixelsFromStandardPixels(1), canvPixelsFromStandardPixels(1));
+        
+        cw = standardPixelsFromCSSPixels(document.body.clientWidth);
+        ch = standardPixelsFromCSSPixels(document.body.clientHeight);
+        
+        ctx.strokeStyle = "#0648a3";
+        ctx.lineWidth = 4;
+      }
+      
+      // Input: What the distance *would* be, as measured in CSS pixels on an infinite-width device
+      // Output: The distance as measured in CSS pixels on the actual device
+      function cssPixelsFromStandardPixels(n) {
+        return n * screenWidthScaleFactor;
+      }
+      
+      function standardPixelsFromCSSPixels(n) {
+        return n / screenWidthScaleFactor;
+      }
+      
+      // Input: What the distance *would* be, as measured in CSS pixels on an infinite-width device
+      // Output: The distance as measured in canv pixels on the actual device
+      function canvPixelsFromStandardPixels(n) {
+        return canvPixelsFromCSSPixels(cssPixelsFromStandardPixels(n));
+      }
+      
+      // Input: The distance as measured in CSS pixels on the actual device
+      // Output: The distance as measured in canv pixels on the actual device
+      function canvPixelsFromCSSPixels(n) {
+        return n * dpiScaleFactor;
+      }
+      
+      function HangingBall(baseX, baseY, r, amplitude, phase, inFront) {
+        this.baseX = baseX;
+        this.baseY = baseY;
+        this.r = r;
+        this.x = this.baseX;
+        this.y = this.baseY;
+        
+        this.period = 50 * Math.sqrt(this.baseY * 50);
+        this.amplitude = amplitude;
+        this.phase = phase;
+        this.inFront = inFront;
+      }
+      HangingBall.prototype.draw = function() {
+        ctx.beginPath();
+        ctx.moveTo(this.baseX, 0);
+        ctx.lineTo(this.x, this.y);
+        ctx.stroke();
+        
+        gx = this.x - this.r/2;
+        gy = this.y - this.r/2;
+        grd = ctx.createRadialGradient(gx, gy, this.r/5, gx, gy, this.r * 1.3);
+        grd.addColorStop(0, "#0960d9");
+        grd.addColorStop(1, "#0648a3");
+        ctx.fillStyle = grd;
+        
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+        ctx.fill();
+      }
+      HangingBall.prototype.move = function(t) {
+        let angle = this.amplitude * Math.sin(2 * Math.PI * (t - this.phase) / this.period); // 0 is vertical downward
+        this.x = this.baseX + this.baseY * Math.sin(angle);
+        this.y = this.baseY * Math.cos(angle);
+      }
+      
+      function update(t) {
+        ctx.clearRect(-cw/2, 0, cw, ch);
+        
+        for (i = 0; i < hangingBalls.length; i++) {
+          hangingBalls[i].move(t);
+          if (!hangingBalls[i].inFront) hangingBalls[i].draw();
+        }
+        
+        ctx.fillStyle = "rgba(255, 255, 255, 0.85)";
+        ctx.fillRect(-300, 150, 600, standardPixelsFromCSSPixels(content.offsetHeight) - 2 * 200 + 100);
+        
+        for (i = 0; i < hangingBalls.length; i++) {
+          if (hangingBalls[i].inFront) hangingBalls[i].draw();
+        }
+        
+        window.requestAnimationFrame(update);
+      }
+      
+      rescale();
+      window.addEventListener("resize", rescale);
+      
+      window.requestAnimationFrame(update);
+      
+      hangingBalls.push(new HangingBall(-500, 470, 65, 0.03, 0, false));
+      hangingBalls.push(new HangingBall(-320, 350, 38, 0.02, 2500, true));
+      hangingBalls.push(new HangingBall(-260, 150, 50, 0.02, 4500, true));
+      hangingBalls.push(new HangingBall(-190, 925, 60, 0.01, 1000, false));
+      hangingBalls.push(new HangingBall(-90, 85, 38, 0.015, 6000, false));
+      hangingBalls.push(new HangingBall(10, 135, 45, 0.02, 5500, false));
+      hangingBalls.push(new HangingBall(73, 983, 33, 0.01, 3800, false));
+      hangingBalls.push(new HangingBall(203, 463, 63, 0.02, 1500, false));
+      hangingBalls.push(new HangingBall(315, 650, 58, 0.02, 2000, true));
+      hangingBalls.push(new HangingBall(455, 245, 45, 0.015, 3000, true));
+    </script>
+  </body>
+</html>

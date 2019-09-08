@@ -66,7 +66,7 @@ def compile():
             Thursday, November 7, 2019
           </div>
           <div class="schedule-item-datetime">
-            Time TBD
+            7:30pm
           </div>
         </div>
         <div class="schedule-item-details">
