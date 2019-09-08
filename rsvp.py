@@ -31,7 +31,7 @@ def compile():
         
           idListFile.write(id + "\n")
         
-  with open("assets/invitation-data.js", "w") as jsfile:
+  with open("assets/invitation-data2.js", "w") as jsfile:
     jsfile.write("const invitations = " + json.dumps(invitations) + ";")
   
   mainContents = (
@@ -61,4 +61,4 @@ def compile():
     </div>
   )
   
-  page.compile("rsvp/index.html", mainContents, stylesheet="/rsvp/index.css", scripts=["/assets/invitation-data.js", "/rsvp/find-invitation-form.js"], title="RSVP")
+  page.compile("rsvp/index.html", mainContents, stylesheet="/rsvp/index.css", scripts=["/assets/invitation-data2.js", "/rsvp/find-invitation-form.js"], title="RSVP")
