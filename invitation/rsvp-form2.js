@@ -94,6 +94,8 @@ WeddingGuest.prototype.generateRecap = function() {
     }
     this.recapLI.appendChild(document.createTextNode(s));
   }
+  
+  rescale();
 }
 
 function submitRSVP() {
