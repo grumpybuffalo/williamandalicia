@@ -49,7 +49,7 @@ def compile(filename, mainContents, title=None, stylesheet=None, scripts=[]):
             <nav>
               <div><button id="nav-hide-button" onclick="hideNav();">Hide</button></div>
               <div><a href="/">HOME</a></div>
-              <div><a href="/schedule">SCHEDULE</a></div>
+              <div><a href="/schedule/">SCHEDULE</a></div>
               <div><a href="/travel/">TRAVEL</a></div>
               <div><a href="/wedding-party/">WEDDING PARTY</a></div>
               <div><a href="/photos/">PHOTOS</a></div>
