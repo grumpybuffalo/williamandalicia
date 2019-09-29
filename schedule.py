@@ -18,11 +18,16 @@ def compile():
             Rehearsal
           </div>
           <div class="schedule-item-datetime">
-            (Special invitation required)<br />
+            (Special invitation required)
+          </div>
+          <div class="schedule-item-datetime">
             Thursday, November 7, 2019
           </div>
           <div class="schedule-item-datetime">
             4pm
+          </div>
+          <div class="schedule-item-datetime">
+            Casual attire
           </div>
         </div>
         <div class="schedule-item-details">
@@ -40,11 +45,16 @@ def compile():
             Rehearsal Dinner
           </div>
           <div class="schedule-item-datetime">
-            (Special invitation required)<br />
+            (Special invitation required)
+          </div>
+          <div class="schedule-item-datetime">
             Thursday, November 7, 2019
           </div>
           <div class="schedule-item-datetime">
             6pm
+          </div>
+          <div class="schedule-item-datetime">
+            Dressy casual attire
           </div>
         </div>
         <div class="schedule-item-details">
@@ -62,11 +72,16 @@ def compile():
             Welcome Party
           </div>
           <div class="schedule-item-datetime">
-            (All guests are invited)<br />
+            (All guests are invited)
+          </div>
+          <div class="schedule-item-datetime">
             Thursday, November 7, 2019
           </div>
           <div class="schedule-item-datetime">
             7:30pm
+          </div>
+          <div class="schedule-item-datetime">
+            Dressy casual attire
           </div>
         </div>
         <div class="schedule-item-details">
@@ -84,11 +99,16 @@ def compile():
             Nuptial Mass
           </div>
           <div class="schedule-item-datetime">
-            (All guests are invited)<br />
+            (All guests are invited)
+          </div>
+          <div>
             Friday, November 8, 2019
           </div>
           <div class="schedule-item-datetime">
             3pm
+          </div>
+          <div class="schedule-item-datetime">
+            Semiformal attire
           </div>
         </div>
         <div class="schedule-item-details">
@@ -106,11 +126,16 @@ def compile():
             Reception
           </div>
           <div class="schedule-item-datetime">
-            (All guests are invited)<br />
+            (All guests are invited)
+          </div>
+          <div class="schedule-item-datetime">
             Friday, November 8, 2019
           </div>
           <div class="schedule-item-datetime">
             6pm - 10pm
+          </div>
+          <div class="schedule-item-datetime">
+            Semiformal attire
           </div>
         </div>
         <div class="schedule-item-details">
