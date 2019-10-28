@@ -6,6 +6,7 @@ import placesOfInterest
 import ourCatholicWedding
 import travel
 import rsvp
+import guestbook
 
 def main():
   home.compile()
@@ -16,6 +17,7 @@ def main():
   ourCatholicWedding.compile()
   travel.compile()
   rsvp.compile()
+  guestbook.compile()
 
 if __name__ == "__main__":
   main()
