@@ -11,7 +11,12 @@ def compile():
           Click here to sign the public guestbook
         </a>
       </div>
-      <iframe src="https://airtable.com/embed/shrsjEuhDPybMgVwd?backgroundColor=gray"></iframe>
+      <div id="guestbook-iframe-container">
+        <div id="guestbook-loading-text">
+          Loading...
+        </div>
+        <iframe src="https://airtable.com/embed/shrsjEuhDPybMgVwd?backgroundColor=gray"></iframe>
+      </div>
     </frag>
   )
   
