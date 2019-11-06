@@ -9,8 +9,8 @@ def compile():
       <h2>
         SCHEDULE
       </h2>
-      <div id="shuttle-info">
-        Shuttle service between events will be provided.
+      <div id="shuttle-info" style="padding:0 10px;">
+        Shuttle service will be provided from the <u>ceremony to the reception</u> and from the <u>reception to the Holiday Inn Austin Town Lake</u>.
       </div>
       <div class="schedule-item">
         <div class="schedule-item-basics">

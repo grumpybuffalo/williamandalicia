@@ -9,8 +9,43 @@ def compile():
       <h2>
         TRAVEL
       </h2>
-      <div id="shuttle-info">
-        Shuttle service between events will be provided.
+      <div class="schedule-item" style="margin-top:50px;">
+        <div class="schedule-item-basics">
+          <div class="schedule-item-name">
+            Austin Charter Services
+          </div>
+          <div class="schedule-item-datetime">
+            Shuttle
+          </div>
+          <div class="schedule-item-location">
+            Unfortunately, parking is limited at all event locations.
+            Shuttle service will be provided from the <u>ceremony to the
+            reception</u> and, at the end of the reception, from the <u>reception
+            to the Holiday Inn Austin Town Lake</u>. That being said, if
+            you do end up parking, here are some suggestions.
+            <ul style="text-align:left;">
+              <li>
+                For the <b>rehearsal dinner / welcome party</b>, Capital
+                Cruises <a href="http://www.capitalcruises.com/map-directions/">suggests</a> parking
+                at the Hyatt Regency Hotel.
+              </li>
+              <li>
+                For the <b>rehearsal / ceremony</b>, consider parking at
+                the <a href="https://staustin.org/parking">St. Austin parking
+                garage</a> at 500 W. Martin Luther King Blvd.
+              </li>
+              <li>
+                For the <b>reception</b>, you can try parking in the
+                overflow parking lot across Lake Austin Boulevard from
+                Abel's. Follow signs for "Oyster Landing Additional
+                Parking".
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="schedule-item-details">
+          <img src="bus.jpg" class="schedule-photo" style="border:1px solid #c0c0c0;" />
+        </div>
       </div>
       <div class="schedule-item">
         <div class="schedule-item-basics">
